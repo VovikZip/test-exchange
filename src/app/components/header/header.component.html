@@ -1,0 +1,13 @@
+
+<div
+    class="h-[80px] w-full bg-black/75 flex px-10 py-4 justify-between"
+>
+    <div class="w-44  flex items-center justify-center" >
+        <span  class="text-3xl text-white/90 font-bold">EXCHANGE</span>
+    </div>
+    <div class=" w-64 flex flex-col items-center justify-center font-semibold text-white/90" >
+        <!-- <span>Sell/Buy</span> -->
+        <span>USD {{exchangeUSD?.rateSell | number: '1.2-2'}}/{{exchangeUSD?.rateBuy | number: '1.2-2'}}</span>
+        <span>EUR {{exchangeEUR?.rateSell | number: '1.2-2'}}/{{exchangeEUR?.rateBuy | number: '1.2-2'}}</span>
+    </div>
+</div>

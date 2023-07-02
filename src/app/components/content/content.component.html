@@ -1,0 +1,40 @@
+<div class="bg-black/75 h-80 mx-8 rounded-3xl py-5 px-5 flex justify-center items-center ">
+  <div class="flex mr-2   ">
+    <div>
+      <!-- <label>From Currency:</label> -->
+      <select class="h-[42px] rounded-l-lg" [(ngModel)]="fromCurrency" (ngModelChange)="onFromCurrencyChange()">
+        <option value="UAH">UAH</option>
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+      </select>
+    </div>
+    
+    <div>
+      <!-- <label>From Amount:</label> -->
+      <input 
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-r-lg border-l-gray-100 dark:border-l-gray-700 border-l-2 focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+        [(ngModel)]="fromAmount" type="number" step="0.01" (ngModelChange)="onFromAmountChange()" min="0"
+      >
+    </div>
+  </div>
+
+  <img src="../../../assets/transform.png" class="w-7 mx-2">
+  
+  <div class="flex ml-2 ">
+    <div>
+      <!-- <label>To Currency:</label> -->
+      <select class="h-[42px] rounded-l-lg" [(ngModel)]="toCurrency" (ngModelChange)="onToCurrencyChange()">
+        <option value="UAH">UAH</option>
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+      </select>
+    </div>
+    <div>
+      <!-- <label>To Amount:</label> -->
+      <input 
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-r-lg border-l-gray-100 dark:border-l-gray-700 border-l-2 focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+        [(ngModel)]="toAmount" type="number" step="0.01" (ngModelChange)="onToAmountChange()" min="0"
+      >
+    </div>
+  </div>
+</div>
